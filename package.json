@@ -1,0 +1,30 @@
+{
+  "name": "parcelstarter3000",
+  "description": "Quick starter for doing anything™ with Parcel bundler",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Ezekiel Aquino",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "stylus": "^0.54.7"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf .cache dist & parcel build index.html"
+  },
+  "dependencies": {
+    "@tensorflow-models/handpose": "^0.0.3",
+    "@tensorflow/tfjs-converter": "^1.7.0",
+    "@tensorflow/tfjs-core": "^1.7.0",
+    "clamp": "^1.0.1",
+    "paper": "^0.12.4",
+    "video-canvas": "^4.0.3",
+    "web-audio-daw": "^4.7.4",
+    "workerize": "^0.1.8"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
+}

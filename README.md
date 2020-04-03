@@ -17,9 +17,12 @@ TensorFlow's handpose only outputs a set of points described by x, y, z coordina
 | `isFist`   | Not glamorously named, but it is what it says. A rough estimation IF a user's hand is closed                            |
 
 ## Usage
+
+`yarn add hand3000` or `npm i hand3000`
+
 ```js
   import * as handpose from '@tensorflow-models/handpose';
-  import DecorateHand from 'Hand3000';
+  import DecorateHand from 'hand3000';
 
   // Initialize tensorflow as usual
   const model = await handpose.load();

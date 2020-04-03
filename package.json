@@ -22,7 +22,8 @@
     "paper": "^0.12.4",
     "video-canvas": "^4.0.3",
     "web-audio-daw": "^4.7.4",
-    "workerize": "^0.1.8"
+    "workerize": "^0.1.8",
+    "youtube-player": "^5.5.2"
   },
   "browserslist": [
     "since 2017-06"

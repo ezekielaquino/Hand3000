@@ -23,13 +23,17 @@
 
   <body>
     <video id="video" playsinline></video>
-    <canvas id="canvas"></canvas>
-    <audio id="audio">
-      <source src="/static/sleepsafe.mp3" type="audio/mpeg">
-    </audio>
+
+    <div id="youtube"></div>
+    
+    <div id="banana">
+      <canvas id="canvas"></canvas>
+    </div>
+
     <div id="container">
       <div id="prompt"></div>
     </div>
+
     <table>
       <thead>
         <tr>
@@ -64,6 +68,21 @@
         </tr>
       </tbody>
     </table>
+
+    <div class="loading">
+      <img src="/static/loading.gif" />
+      <p>
+        Basic experiment for doing something with Tensorflow's handpose.<br/>
+        When loaded, place hands in front of camera and it'll start tracking (might lag a bit at first).<br/>
+        Try moving your hands closer or further away to control the volume. Making a fist will pause.</br>
+        <br/>
+        Just put your hands in the frame to start!<br/>
+        Ready, set, conduct!
+      </p>
+      <button id="go">
+        OK READY!
+      </button>
+    </div>
   </body>
 
   <script src="/src/js/index.js"></script>

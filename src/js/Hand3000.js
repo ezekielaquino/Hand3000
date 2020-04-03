@@ -28,6 +28,10 @@ function decorate(predictions) {
         landmarks[20],
       ],
     });
+    const roll = (Math.atan2(
+      landmarks[0][1] - landmarks[9][1],
+      landmarks[0][0] - landmarks[9][0],
+    ) * 180 / Math.PI) - 90;
 
     // let's return an array for now while
     // it only supports one hand detection
@@ -36,6 +40,7 @@ function decorate(predictions) {
       ...predictions[0],
         distance,
         spread,
+        roll,
         pitch,
         isFist,
       },

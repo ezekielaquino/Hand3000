@@ -19,6 +19,7 @@
     "@tensorflow/tfjs-converter": "^1.7.0",
     "@tensorflow/tfjs-core": "^1.7.0",
     "clamp": "^1.0.1",
+    "hand3000": "^0.0.1",
     "paper": "^0.12.4",
     "video-canvas": "^4.0.3",
     "youtube-player": "^5.5.2"

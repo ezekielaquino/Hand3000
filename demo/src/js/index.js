@@ -1,7 +1,7 @@
 import * as handpose from '@tensorflow-models/handpose';
 import paper from 'paper/dist/paper-core';
 import videoCanvas from 'video-canvas';
-import DecorateHand from './Hand3000';
+import DecorateHand from 'hand3000';
 import YouTubePlayer from 'youtube-player';
 import clamp from 'clamp';
 

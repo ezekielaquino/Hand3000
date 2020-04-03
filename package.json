@@ -1,8 +1,9 @@
 {
   "name": "hand3000",
   "description": "An experimental and rudimentary decorator for TensorFlow's Handpose",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "author": "Ezekiel Aquino",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "github:ezekielaquino/Hand3000"
 }

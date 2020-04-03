@@ -3,6 +3,8 @@
 
 Currently an experimental and rudimentary decorator for TensorFlow's Handpose.
 
+[Demo](https://ezekielaquino.com/Hand3000)
+
 ## What
 TensorFlow's handpose only outputs a set of points described by x, y, z coordinates. This little experimental "decorator" just evaluates these points and decorates the output of `estimateHands` with values such as `distance`, `spread`, `roll`, `pitch`, `isFist`.
 

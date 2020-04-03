@@ -1,31 +1,29 @@
-# ParcelStarter3000 📦🐣
-Quick starter for doing anything™ web with Parcel bundler
+# Hand3000
+Currently an experimental and rudimentary decorator for TensorFlow's Handpose.
 
 ## What
-This is just my basic configuration for starting anything be it a simple website or an experiment! It uses the amazingly uncomplicated and amazing Parcel bundler 🌈 because it's all about getting started!
+TensorFlow's handpose only outputs a set of points described by x, y, z coordinates. This little experimental "decorator" just evaluates these points and decorates the output of `estimateHands` with values such as `distance`, `spread`, `roll`, `pitch`, `isFist`.
 
-## How
-Assuming you already have node installed on your system
-- Clone this repository
-- `cd` into where you cloned it
-- `yarn start`
+| Value      | Description                                                                                                             |
+|------------|-------------------------------------------------------------------------------------------------------------------------|
+| `distance` | An estimate of the hand distance from the camera. Basically a measurement between 2 of the "static" points in the model |
+| `spread`   | An average calculation of the distance between fingertips                                                               |
+| `roll`     | Like how an airplane moves, roll is the rotation in the x-axis                                                          |
+| `pitch`    | Like how an airplane moves, roll is the rotation in the x-axis                                                          |
+| `isFist`   | Not glamorously named, but it is what it says. A rough estimation IF a user's hand is closed                            |
 
-That's it!
+## Usage
+```js
+  import * as handpose from '@tensorflow-models/handpose';
+  import DecorateHand from 'Hand3000';
 
-When you're ready to build just `yarn build`
+  // Initialize tensorflow as usual
+  const model = await handpose.load();
 
-## Extras
-- This also includes a basic prettier config
-- `yarn start` and `build` clears `.cache` every run
-- `yarn build` also clears out your `dist` folder
-- you can place static assets in `static` folder and they won't be file rev'ed
+  // Feed the model into Hand3000
+  DecorateHand(model);
 
-## Tip!
-If you want to alias cloning this repo (as I do) just do e.g. in Terminal ```bootstrap MyProjectName```
-Just do the following:
-- open terminal
-- `open ~/.bash_profile`
-- add an `alias` config there for example `alias="bootstrap git@github.com:ezekielaquino/ParcelStarter3000.git"`
-- save it
-- reload terminal
-- ta da! If you want to quickly begin a new project using this/or any other starter just type in `bootstrap [optional folder name]`
+  // This just tweaks the estimateHand methods and adds
+  // above computed values in the return of estimateHands
+  const predictions = await model.estimateHands(source);
+```

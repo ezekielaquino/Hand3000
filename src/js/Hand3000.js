@@ -1,3 +1,20 @@
+/**
+ * Hand3000
+ * ༼ つ ◕_◕ ༽つ
+ * 
+ * Currently an experimental and rudimentary
+ * decorator for TensorFlow's Handpose
+ * 
+ * Usage:
+ * const tensorFlowModel = await handpose.load();
+ * 
+ * DecorateHand(tensorFlowModel);
+ * 
+ * tensorFlowModel.estimateHands(source);
+ * -> returns coordinates with computed values
+ * -> e.g. distance, spread, roll, pitch, isFist
+ */
+
 async function DecorateHand(model) {
   model.estimateMethod = model.estimateHands;
 
